@@ -7,6 +7,27 @@ CREATE TABLE Members(
 	Residence VarChar(30) Not Null,
 	Gender VarChar(1)
 );
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (1, 'Tammin', 'Gauden', 93900725822, 'F', '17.12.2001', 'Huangtu');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (2, 'Yetty', 'Hollyard', 13671744300, 'F', '23.10.2005', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (3, 'Kenny', 'Gorse', 92752487812, 'M', '29.6.1994', 'Sheffield');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (4, 'Ekaterina', 'Drury', 12748550428, 'F', '8.12.2005', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (5, 'Aurelea', 'Gino', 98799517097, 'F', '22.9.1999', 'Basicao Coastal');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (6, 'Kayne', 'Desporte', 57322751410, 'M', '9.11.1992', 'Toksovo');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (7, 'Guillaume', 'Breward', 49832412953, 'M', '1.4.2001', 'Narok');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (8, 'Fabin', 'Hazeldine', 67019064813, 'M', '28.2.1997', 'Hachiōji');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (9, 'Lorelle', 'Palffy', 67496353003, 'F', '18.7.2005', 'Xiaofayi');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (10, 'Nahin', 'Hachard', 53110709763, 'M', '3.3.1995', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (11, 'Kelli', 'Filipczynski', 94810811144, 'F', '11.9.1992', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (12, 'Neville', 'Shaw', 83044730518, 'M', '30.11.1991', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (13, 'Rolph', 'Andrzejewski', 97718018720, 'M', '3.11.2000', 'Cerklje na Gorenjskem');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (15, 'Vale', 'Gueste', 70863045027, 'M', '18.11.2003', 'Shubenka');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (16, 'Errol', 'Leads', 99647502246, 'M', '11.3.1991', 'Cerkvenjak');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (17, 'Scott', 'Swenson', 46590316741, 'M', '12.11.2002', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (18, 'Allen', 'Gummory', 55869963359, 'M', '26.9.1992', 'Split');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (19, 'Rhea', 'Bolesma', 14756509161, 'F', '9.3.1999', 'Sophia Antipolis');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (20, 'Bee', 'Nathon', 54105904731, 'F', '4.12.1997', 'Āwash');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (21, 'Devlin', 'Eye', 34323078405, 'M', '6.1.1996', 'New Panamao');
+insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (22, 'Mariellen', 'Zavattero', 38060697682, 'F', '7.3.2002', 'Split');
 
 CREATE TABLE Fields(
 	FieldId SERIAL PRIMARY KEY,
@@ -17,17 +38,9 @@ CREATE TABLE Fields(
 
 insert into Fields(FieldId, Name, Leaderid)
 Values (1, 'Programiranje', 1),
- (2, 'Markeitng', 21),
- (3, 'Programiranje', 14),
- (4, 'Multimedija', 9)
-
-CREATE TABLE Internship(
-	InternshipID SERIAL PRIMARY KEY,
-	Phase VarChar(1),
-	StartDate Timestamp,
-	EndDate Timestamp
-);
-
+ (2, 'Marketing', 21),
+ (3, 'Dizajn', 15),
+ (4, 'Multimedija', 9);
 
 
 CREATE TABLE MembersFields(
@@ -36,132 +49,54 @@ CREATE TABLE MembersFields(
 	PRIMARY KEY (MemberId, Fieldid)
 
 );
-/*Data for membersfields*/
-insert into MembersFields (MemberId, FieldId) values (34, 1);
-insert into MembersFields (MemberId, FieldId) values (39, 4);
-insert into MembersFields (MemberId, FieldId) values (30, 1);
-insert into MembersFields (MemberId, FieldId) values (39, 1);
+
 insert into MembersFields (MemberId, FieldId) values (21, 2);
 insert into MembersFields (MemberId, FieldId) values (20, 1);
 insert into MembersFields (MemberId, FieldId) values (7, 1);
 insert into MembersFields (MemberId, FieldId) values (10, 2);
-insert into MembersFields (MemberId, FieldId) values (11, 2);
-insert into MembersFields (MemberId, FieldId) values (26, 2);
-insert into MembersFields (MemberId, FieldId) values (23, 4);
-insert into MembersFields (MemberId, FieldId) values (26, 4);
-insert into MembersFields (MemberId, FieldId) values (25, 3);
-insert into MembersFields (MemberId, FieldId) values (36, 3);
 insert into MembersFields (MemberId, FieldId) values (5, 1);
 insert into MembersFields (MemberId, FieldId) values (20, 2);
 insert into MembersFields (MemberId, FieldId) values (19, 1);
 insert into MembersFields (MemberId, FieldId) values (22, 1);
 insert into MembersFields (MemberId, FieldId) values (20, 4);
-insert into MembersFields (MemberId, FieldId) values (33, 3);
-insert into MembersFields (MemberId, FieldId) values (38, 3);
 insert into MembersFields (MemberId, FieldId) values (20, 3);
-insert into MembersFields (MemberId, FieldId) values (35, 1);
-insert into MembersFields (MemberId, FieldId) values (36, 1);
-insert into MembersFields (MemberId, FieldId) values (29, 4);
-insert into MembersFields (MemberId, FieldId) values (29, 3);
 insert into MembersFields (MemberId, FieldId) values (12, 1);
-insert into MembersFields (MemberId, FieldId) values (29, 2);
 insert into MembersFields (MemberId, FieldId) values (6, 1);
-insert into MembersFields (MemberId, FieldId) values (38, 2);
 insert into MembersFields (MemberId, FieldId) values (17, 3);
 insert into MembersFields (MemberId, FieldId) values (13, 3);
 insert into MembersFields (MemberId, FieldId) values (18, 4);
-insert into MembersFields (MemberId, FieldId) values (27, 2);
 insert into MembersFields (MemberId, FieldId) values (19, 3);
-insert into MembersFields (MemberId, FieldId) values (24, 4);
-insert into MembersFields (MemberId, FieldId) values (23, 2);
 insert into MembersFields (MemberId, FieldId) values (18, 2);
-insert into MembersFields (MemberId, FieldId) values (31, 2);
-insert into MembersFields (MemberId, FieldId) values (30, 2);
 insert into MembersFields (MemberId, FieldId) values (9, 2);
-insert into MembersFields (MemberId, FieldId) values (14, 1);
-insert into MembersFields (MemberId, FieldId) values (28, 4);
-insert into MembersFields (MemberId, FieldId) values (37, 1);
-insert into MembersFields (MemberId, FieldId) values (34, 2);
+insert into MembersFields (MemberId, FieldId) values (15, 1);
 insert into MembersFields (MemberId, FieldId) values (2, 2);
-insert into MembersFields (MemberId, FieldId) values (35, 3);
 insert into MembersFields (MemberId, FieldId) values (21, 1);
 insert into MembersFields (MemberId, FieldId) values (6, 3);
 insert into MembersFields (MemberId, FieldId) values (5, 3);
 insert into MembersFields (MemberId, FieldId) values (15, 2);	
 insert into MembersFields (MemberId, FieldId) values (12, 3);
-insert into MembersFields (MemberId, FieldId) values (39, 3);
-insert into MembersFields (MemberId, FieldId) values (35, 2);
 insert into MembersFields (MemberId, FieldId) values (4, 2); 	
-insert into MembersFields (MemberId, FieldId) values (14, 2);
-insert into MembersFields (MemberId, FieldId) values (24, 3);
+insert into MembersFields (MemberId, FieldId) values (16, 2);
 insert into MembersFields (MemberId, FieldId) values (4, 1);
+CREATE TABLE Internships(
+	InternshipID SERIAL PRIMARY KEY,
+	Phase VarChar(10),
+	StartDate Timestamp,
+	EndDate Timestamp,
+	LeaderId int REFERENCES Members(MemberId)
+);
 
-/*Data for members*/
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (1, 'Tammie', 'Gauden', 93900725822, 'F', '17.12.2001', 'Huangtu');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (2, 'Yetty', 'Hollyard', 13671744300, 'F', '23.10.2005', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (3, 'Kenny', 'Gorse', 9272487812, 'M', '29.6.1994', 'Sheffield');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (4, 'Ekaterina', 'Drury', 12748550428, 'F', '8.12.2005', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (5, 'Aurelea', 'Gino', 98799517097, 'F', '22.9.1999', 'Basicao Coastal');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (6, 'Kayne', 'Desporte', 57322751410, 'M', '9.11.1992', 'Toksovo');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (7, 'Guillaume', 'Breward', 49832412953, 'M', '1.4.2001', 'Narok');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (8, 'Fabe', 'Hazeldine', 67019064813, 'M', '28.2.1997', 'Hachiōji');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (9, 'Lorelle', 'Palffy', 67496353003, 'F', '18.7.2005', 'Xiaofayi');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (10, 'Nahum', 'Hachard', 53110709763, 'M', '3.3.1995', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (11, 'Kelli', 'Filipczynski', 94810811144, 'F', '11.9.1992', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (12, 'Neville', 'Shaw', 83044730518, 'M', '30.11.1991', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (13, 'Rolph', 'Andrzejewski', 97718018720, 'M', '3.11.2000', 'Cerklje na Gorenjskem');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (14, 'Kimball', 'Niche', 7578671942, 'M', '25.12.2005', 'Jaguaribe');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (15, 'Vale', 'Gueste', 70863045027, 'M', '18.11.2003', 'Shubenka');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (16, 'Errol', 'Leads', 99647502246, 'M', '11.3.1991', 'Cerkvenjak');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (17, 'Scott', 'Swenson', 46590316741, 'M', '12.11.2002', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (18, 'Allen', 'Gummory', 55869963359, 'M', '26.9.1992', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (19, 'Rhea', 'Bolesma', 14756509161, 'F', '9.3.1999', 'Sophia Antipolis');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (20, 'Bee', 'Nathon', 54105904731, 'F', '4.12.1997', 'Āwash');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (21, 'Devlin', 'Eye', 34323078405, 'M', '6.1.1996', 'New Panamao');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (22, 'Mariellen', 'Zavattero', 38060697682, 'F', '7.3.2002', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (23, 'Cybil', 'Luthwood', 52971717127, 'F', '11.9.2001', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (24, 'Paolo', 'Tatchell', 90520372753, 'M', '18.10.2001', 'Shebekino');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (25, 'Ogdon', 'Puzey', 52765516161, 'M', '10.2.2000', 'Studénka');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (26, 'Raine', 'Hartigan', 94156095015, 'F', '30.1.2004', 'Ulaan Khat');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (27, 'Lyman', 'Dunster', 15438298999, 'M', '15.4.1992', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (28, 'Olwen', 'Haseley', 74312596224, 'F', '31.12.1998', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (29, 'Florinda', 'Darnody', 3352079310, 'F', '3.11.2002', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (30, 'Terza', 'Auten', 88425084804, 'F', '17.7.1994', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (31, 'Aurie', 'Pirrie', 34840340419, 'F', '2.9.2002', 'Azor');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (32, 'Randall', 'Withur', 58502888327, 'M', '6.9.1999', 'Tadabliro');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (33, 'Etheline', 'Josovitz', 90535421735, 'F', '17.8.2003', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (34, 'Zita', 'Rooze', 44818097729, 'F', '30.4.2004', 'Noveleta');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (35, 'Austen', 'Habin', 1871219843, 'M', '8.11.2004', 'Xinxing');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (36, 'Launce', 'Suff', 72358579693, 'M', '15.1.2000', 'Split');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (37, 'Edgardo', 'Warner', 99639088168, 'M', '14.11.2001', 'Néa Mákri');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (38, 'Pierre', 'Baylie', 40979392330, 'M', '3.11.2003', 'Kinh Môn');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (39, 'Elene', 'Skeleton', 16783149257, 'F', '2.6.2006', 'Loboniki');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (40, 'Stanwood', 'Carme', 44681031315, 'M', '1.7.2004', 'Thepharak');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (41, 'Genna', 'Ebanks', 61702619528, 'F', '1.4.2006', 'Jalālpur');
-insert into Members (Memberid, name, surname, oib, gender, DateOfBirth, Residence) values (42, 'Alan', 'Genese', 83515979486, 'M', '13.10.1994', 'Prostřední Bečva');
-
-/*zad1
-SELECT m.name, m.surname FROM Members m
-where m.Residence!='Split'
-*/
-	
-/*zad 6
-UPDATE Members m
-SET Residence = 'Moscow'
-WHERE Name like '%in'
+INSERT INTO Internships(InternshipID, Phase, StartDate, EndDate, Leaderid)
+VALUES (1,'završen', '1.1.2000', '2.6.2000', 1),
+ (2,'završen', '1.11.2005', '2.5.2006', 5),
+ (3,'u tijeku', '1.11.2022', '4.12.2022', 5),
+ (4,'budući', '1.1.2025', '12.6.2025', 7),
+ (5,'budući', '1.1.2030', '9.4.2030', 10);
 
 
-Select m.name, m.residence FROM members m
-where m.name like '%in'
-*/
-
-/*zad7
 
 
-SELECT M.NAME, M.memberid from members M 
-WHERE NOW()-m.DateOfBirth> INTERVAL '25 years'
-DELETE FROM Members m WHERE NOW()-m.DateOfBirth> INTERVAL '25 years'
-*/
+
 
 CREATE TABLE Interns(
 	InternId SERIAL PRIMARY KEY,	
@@ -172,187 +107,417 @@ CREATE TABLE Interns(
 	Gender VarChar(1),
 	Residence VarChar(30)
 );
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (1, 'Erhard', 'Scoffins', 53486081194, 'M', '26.2.1995', 'Krajan Dua Patempuran');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (2, 'Mal', 'Kempster', 10497171602, 'M', '17.6.1999', 'Jincheng');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (3, 'Augie', 'Fewless', 96981733906, 'M', '1.4.1995', 'Zhougang');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (4, 'Nadean', 'Kenzie', 69253796763, 'F', '31.3.2005', 'Xiexiong');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (5, 'Vally', 'Cawthorn', 51181991423, 'F', '28.11.1997', 'Nyaungdon');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (6, 'Tandi', 'Ellacott', 91371008836, 'F', '24.10.2003', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (7, 'Germaine', 'Reightley', 70258555346, 'M', '9.3.1993', 'Pisan');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (8, 'Berton', 'Chotty', 41443676012, 'M', '23.11.1995', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (9, 'Moreen', 'Ronchetti', 32576572283, 'F', '22.10.2001', 'Badulla');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (10, 'Gothart', 'Devonish', 64123347898, 'M', '4.6.2003', 'Huyuan');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (11, 'Ambrose', 'Dovydenas', 84258352212, 'M', '4.8.2003', 'Svedala');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (12, 'Kenneth', 'Wraith', 60941670581, 'M', '19.3.1996', 'Monteros');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (13, 'Christalle', 'Pfeffer', 89598116739, 'F', '14.9.1994', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (14, 'Konstantin', 'Godfroy', 84439722125, 'M', '12.6.1993', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (15, 'Orran', 'Burtt', 47868405290, 'M', '6.3.2001', 'Mirimire');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (16, 'Garv', 'Wrenn', 22805849426, 'M', '1.3.1991', 'Bordeaux');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (17, 'Dix', 'Waggitt', 53221444263, 'F', '26.6.2000', 'Grytviken');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (18, 'Arturo', 'Gable', 596822825, 'M', '9.5.1999', 'Padina');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (19, 'Alex', 'Stilly', 72852495994, 'F', '22.6.2000', 'Non Suwan');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (20, 'Ancell', 'Posten', 86942842512, 'M', '3.2.2003', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (21, 'Delcine', 'Baggott', 37936085961, 'F', '9.2.2005', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (22, 'Salmon', 'Demsey', 11186276860, 'M', '29.6.1999', 'Governor’s Harbour');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (23, 'Giacopo', 'Lovelace', 45215221190, 'M', '6.10.1996', 'Jilong');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (24, 'Ezmeralda', 'Brunger', 37733229854, 'F', '6.12.2004', 'Agbani');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (25, 'Gabriela', 'Gozney', 8857358430, 'F', '17.12.2003', 'Zhuoshui');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (26, 'Dukie', 'Shynn', 45873729800, 'M', '16.7.2005', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (27, 'Cal', 'Quarrie', 10963535838, 'M', '29.8.1991', 'Kolomyya');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (28, 'Daile', 'Bertot', 33785255626, 'F', '9.6.1991', 'Staritsa');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (29, 'Conrad', 'Pettinger', 94286824255, 'M', '1.4.1998', 'Mamoudzou');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (30, 'Tani', 'Daveren', 70581897878, 'F', '2.7.1998', 'Dulce Nombre de Culmí');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (31, 'Cleve', 'Duffett', 95336416653, 'M', '11.3.1999', 'Jaffna');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (32, 'Malorie', 'Lindblom', 82587328062, 'F', '10.1.2000', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (33, 'Jemmy', 'Smorthit', 67928618014, 'F', '13.2.1997', 'Jebba');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (34, 'Joshia', 'Chiommienti', 22399497168, 'M', '8.12.1999', 'Cashel');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (35, 'Dora', 'Bessett', 83511201713, 'F', '31.1.1992', 'Cikaras');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (36, 'Reinald', 'Dark', 93899044967, 'M', '11.7.1993', 'Lafayette');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (37, 'Leighton', 'Rowley', 30697260616, 'M', '14.9.2004', 'Fovissste');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (38, 'Queenie', 'Frowen', 15897781704, 'F', '2.5.1994', 'Martanesh');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (39, 'Ailyn', 'Weatherell', 40823384768, 'F', '6.4.1998', 'Chechenglu');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (40, 'Catarina', 'Brundle', 47794296087, 'F', '4.2.1998', 'Paringin');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (41, 'Andros', 'Kinkaid', 7240127042, 'M', '13.8.1997', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (42, 'Delaney', 'Leither', 61076278350, 'M', '7.12.1998', 'Ban Dung');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (43, 'Arielle', 'Noblett', 30393920127, 'F', '14.4.1997', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (44, 'Marjorie', 'Mercik', 88757068631, 'F', '1.1.1997', 'Hongshan');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (45, 'Alfie', 'Ingolotti', 58269561226, 'M', '14.7.2002', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (46, 'Ulick', 'Sherville', 17397345323, 'M', '27.1.2001', 'Stavyshche');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (47, 'Marline', 'Larkings', 31248613251, 'F', '4.2.2004', 'Sirājganj');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (48, 'Ricky', 'Vedyasov', 43841886818, 'F', '17.4.2003', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (49, 'Dotty', 'Rollett', 31483113734, 'F', '27.5.1994', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (50, 'Inglebert', 'Colicot', 55986972757, 'M', '13.3.2006', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (51, 'Leshia', 'Betteson', 74882264752, 'F', '16.4.2005', 'Varna');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (52, 'Freeland', 'McAuslan', 17205256193, 'M', '21.8.1998', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (53, 'Tammara', 'Miere', 8993785769, 'F', '1.2.1998', 'Sumbersewu');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (54, 'Teodorico', 'Daley', 92094563370, 'M', '14.7.1992', 'Utrecht (stad)');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (55, 'Binky', 'Jurgensen', 48696213271, 'M', '20.5.1997', 'Chengtang');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (56, 'Abeu', 'Lawrie', 74851319803, 'M', '10.3.1996', 'Menuma');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (57, 'Stephie', 'Iles', 20739028430, 'F', '27.3.2003', 'Pakisrejo');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (58, 'Cross', 'Sprott', 9478511579, 'M', '29.12.2000', 'Āq Qāyeh');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (59, 'Shalom', 'Redemile', 87327908097, 'M', '22.5.1992', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (60, 'Tomkin', 'Cockle', 5466039741, 'M', '22.12.1995', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (61, 'Darren', 'Wonfar', 85770897665, 'M', '16.1.2004', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (62, 'Storm', 'Epps', 9479867603, 'F', '4.9.1998', 'Itapuí');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (63, 'Elise', 'Ivanov', 28873253281, 'F', '10.9.2001', 'Bangolo');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (64, 'Katrina', 'Umpleby', 65441092716, 'F', '7.5.1994', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (65, 'Celestine', 'Dashkov', 97880371395, 'F', '14.2.2000', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (66, 'Levon', 'Corter', 89939354371, 'M', '1.9.1993', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (67, 'Munroe', 'Gunter', 36472029911, 'M', '19.2.1998', 'Kirove');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (68, 'Pascal', 'Scoyne', 56038496690, 'M', '16.10.2002', 'Brejo da Madre de Deus');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (69, 'Aldwin', 'Hughf', 67071902201, 'M', '3.8.1997', 'Altay');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (70, 'Anson', 'Serotsky', 84979595495, 'M', '5.12.1997', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (71, 'Gipsy', 'Borrie', 60236732861, 'F', '10.8.1991', 'Kouqian');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (72, 'Kattie', 'Aldrick', 66880018298, 'F', '29.6.1995', 'Soubré');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (73, 'Benedikta', 'Adao', 68885779659, 'F', '14.7.1993', 'Hetian');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (74, 'Thedrick', 'Scartifield', 3517249058, 'M', '16.7.1996', 'Split');
-insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (75, 'Chloette', 'Call', 30507954872, 'F', '19.5.2005', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (1, 'Blinnie', 'Bargh', '79581474221', 'F', '27.3.2006', 'Nungga');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (2, 'Alta', 'Gervaise', '25694145221', 'F', '9.3.2000', 'La Ravoire');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (3, 'Ky', 'Attwill', '58037327611', 'M', '15.5.2003', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (4, 'Susanetta', 'Sharplin', '16170265221', 'F', '20.1.1999', 'Doblas');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (5, 'Maryann', 'Witheford', '11484624651', 'F', '23.7.2002', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (6, 'Esteban', 'Vanyashin', '36285818771', 'M', '17.3.2003', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (7, 'Aharon', 'Norquay', '26229849281', 'M', '30.12.2001', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (8, 'Amargo', 'Swanson', '51496578321', 'F', '15.12.2005', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (9, 'Claire', 'Sunley', '99376570081', 'F', '29.7.2003', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (10, 'Tasha', 'Goode', '74628491271', 'F', '12.3.2006', 'Alexandria');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (11, 'Lindsey', 'O''Duilleain', '76046670071', 'F', '23.1.1999', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (12, 'Tallia', 'Fairbrother', '44247913001', 'F', '1.5.2005', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (13, 'Orlan', 'Lemon', '61745621581', 'M', '31.1.2005', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (14, 'Elna', 'Churchouse', '93390618961', 'F', '21.7.2005', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (15, 'Beulah', 'Spillman', '63168973831', 'F', '21.7.2002', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (16, 'Terra', 'Hamblett', '90827056801', 'F', '3.1.2001', 'Piraí');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (17, 'Starlin', 'Gooderson', '97436616031', 'F', '19.6.2003', 'Baizhang');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (18, 'Fey', 'Demangeon', '32094697411', 'F', '19.7.2001', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (19, 'Katey', 'Abramzon', '87784880011', 'F', '2.10.2003', 'Panay');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (20, 'Andie', 'Vyvyan', '62492846481', 'F', '27.8.1999', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (21, 'Cherye', 'Malam', '03382343141', 'F', '20.9.2000', 'Gangshangji');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (22, 'Edmund', 'Barnson', '78768149801', 'M', '2.7.2002', 'Zabrušany');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (23, 'Shari', 'Sare', '15430922171', 'F', '11.10.2006', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (24, 'Marchelle', 'Cafferty', '76938613511', 'F', '1.7.2004', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (25, 'Anselm', 'Christoffels', '80704367431', 'M', '18.9.2003', 'Kutorejo');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (26, 'Nyssa', 'Riggott', '07206045831', 'F', '4.8.2003', 'Nanyuan');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (27, 'Sebastien', 'Rene', '18823577011', 'M', '24.7.2005', 'San Marcos');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (28, 'Rollie', 'Harly', '03404447541', 'M', '15.2.2000', 'El Rincón');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (29, 'Bab', 'Walsh', '84673633041', 'F', '10.12.2006', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (30, 'Gunther', 'Cullity', '14330281821', 'M', '2.7.2004', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (31, 'Hodge', 'Dodworth', '95890142671', 'M', '24.11.2006', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (32, 'Pietrek', 'Glencrosche', '71971877101', 'M', '29.11.2003', 'Zhaoqing');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (33, 'Coretta', 'Postance', '12044753691', 'F', '3.6.1999', 'Gävle');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (34, 'Mariele', 'Denisovo', '15470956441', 'F', '27.4.2002', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (35, 'Iorgos', 'Whitlow', '29191669211', 'M', '7.1.2003', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (36, 'Janith', 'Bolver', '57373711661', 'F', '21.11.2000', 'Abuochiche');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (37, 'Nathanial', 'McPeck', '47588681231', 'M', '7.4.2001', 'Osięciny');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (38, 'Robinet', 'MacKeague', '10155597431', 'F', '20.11.1999', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (39, 'Carlen', 'Beadnall', '17384969961', 'F', '24.12.2004', 'Split');
+insert into Interns (InternId, name, surname, oib, gender, DateOfBirth, Residence) values (40, 'Clim', 'Fairholm', '02805876271', 'M', '28.5.2004', 'Ituiutaba');
 
 CREATE TABLE InternsFields(
+	InternshipId int REFERENCES Internships(InternshipId),
 	InternId int REFERENCES Interns(InternId),
 	Status VarChar(10),
 	FIeldId int REFERENCES Fields(FieldId),
-	PRIMARY KEY (InternId,FieldId)
+	PRIMARY KEY (InternshipId, InternId, FieldId)
 );
-insert into InternsFields (InternId, FieldId, Status) values (1, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (3, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (4, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (5, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (7, 3, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (9, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (10, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (11, 4, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (12, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (13, 3, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (14, 4, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (15, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (16, 2, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (17, 3, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (18, 3, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (19, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (20, 2, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (21, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (22, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (23, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (24, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (25, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (26, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (27, 3, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (28, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (29, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (30, 4, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (31, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (32, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (33, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (34, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (35, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (36, 2, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (38, 1, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (39, 4, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (40, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (1, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (2, 3, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (3, 2, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (4, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (5, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (6, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (7, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (8, 4, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (10, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (11, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (12, 3, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (13, 1, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (15, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (16, 3, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (17, 2, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (19, 1, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (20, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (21, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (23, 2, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (25, 2, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (26, 2, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (27, 1, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (28, 1, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (29, 3, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (30, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (31, 2, 'U tijeku');
-insert into InternsFields (InternId, FieldId, Status) values (32, 3, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (35, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (36, 1, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (37, 4, 'Polozen');
-insert into InternsFields (InternId, FieldId, Status) values (38, 2, 'Izbacen');
-insert into InternsFields (InternId, FieldId, Status) values (40, 4, 'Izbacen');
+
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 1, 1, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 2, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 3, 2, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 4, 4, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 5, 4, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 6, 1, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 7, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 8, 3, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 9, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 10, 4, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 11, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 12, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 13, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 14, 3, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 15, 4, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 16, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 17, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 18, 4, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 19, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 20, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 21, 3, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 22, 1, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 23, 4, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 24, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 25, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 26, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 28, 4, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 29, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 30, 4, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 31, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 32, 4, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 33, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 34, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 35, 4, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 36, 4, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 37, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 38, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 39, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 40, 1, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 1, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 2, 4, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 3, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 4, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 5, 1, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 6, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 7, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 8, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 9, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 10, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 11, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 12, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 13, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 14, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 15, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 16, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 17, 2, 'Polozen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 18, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 19, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 20, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 21, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 22, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 23, 2, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 24, 2, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 25, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 26, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 27, 3, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 28, 4, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 29, 2, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 30, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 31, 1, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 32, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 33, 2, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (3, 36, 3, 'u tijeku');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 37, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (1, 38, 1, 'Izbacen');
+insert into InternsFields (InternshipId, InternId, FieldId, Status) values (2, 40, 1, 'Izbacen');
+
+CREATE TABLE Tasks(
+	Title VarChar(30),
+	MemberId int REFERENCES Members(MemberId),
+	FieldId int REFERENCES Fields(FIeldId),
+	InternshipId int REFERENCES Internships(InternshipId),
+	TaskId SERIAL PRIMARY KEY
+);
+
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (1, 'lacus at turpis', 17, 2, 4);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (2, 'amet turpis elementum', 18, 3, 2);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (3, 'non lectus aliquam', 19, 4, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (4, 'pede', 8, 4, 2);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (5, 'magna ac', 11, 2, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (6, 'odio', 17, 1, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (7, 'sed accumsan', 15, 3, 5);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (8, 'eleifend', 12, 4, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (9, 'interdum eu', 7, 1, 4);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (10, 'pretium', 16, 4, 1);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (11, 'id mauris vulputate', 20, 2, 4);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (12, 'aliquam sit amet', 21, 1, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (13, 'vehicula', 9, 1, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (14, 'nulla ut erat', 10, 4, 5);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (15, 'elit', 12, 2, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (16, 'hac habitasse platea', 19, 3, 4);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (17, 'nulla', 15, 3, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (18, 'lobortis sapien sapien', 22, 1, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (19, 'ac', 16, 2, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (20, 'felis eu', 15, 4, 5);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (21, 'convallis', 17, 2, 2);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (22, 'quis tortor', 6, 2, 4);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (23, 'aliquet massa id', 17, 1, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (24, 'tristique fusce', 20, 3, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (25, 'lectus', 17, 2, 2);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (26, 'semper', 22, 1, 4);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (27, 'tincidunt lacus at', 13, 2, 1);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (28, 'turpis donec posuere', 19, 3, 5);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (29, 'donec quis orci', 10, 4, 3);
+insert into Tasks (TaskId, Title, MemberId, FieldId, InternshipId) values (30, 'quam turpis adipiscing', 11, 3, 2);
+
+CREATE TABLE Grades(
+	Grade int,
+	TaskId int REFERENCES Tasks(TaskId),
+	InternId int REFERENCES Interns(InternId),
+	PRIMARY KEY (TaskId,InternId)
+);
+
+insert into Grades (Grade, TaskId, InternId) values (4, 20, 29);
+insert into Grades (Grade, TaskId, InternId) values (1, 19, 31);
+insert into Grades (Grade, TaskId, InternId) values (3, 23, 34);
+insert into Grades (Grade, TaskId, InternId) values (4, 7, 5);
+insert into Grades (Grade, TaskId, InternId) values (1, 4, 30);
+insert into Grades (Grade, TaskId, InternId) values (1, 23, 19);
+insert into Grades (Grade, TaskId, InternId) values (1, 15, 21);
+insert into Grades (Grade, TaskId, InternId) values (5, 9, 35);
+insert into Grades (Grade, TaskId, InternId) values (2, 3, 40);
+insert into Grades (Grade, TaskId, InternId) values (1, 13, 25);
+insert into Grades (Grade, TaskId, InternId) values (1, 7, 18);
+insert into Grades (Grade, TaskId, InternId) values (5, 7, 38);
+insert into Grades (Grade, TaskId, InternId) values (1, 14, 11);
+insert into Grades (Grade, TaskId, InternId) values (5, 10, 7);
+insert into Grades (Grade, TaskId, InternId) values (1, 8, 29);
+insert into Grades (Grade, TaskId, InternId) values (2, 20, 11);
+insert into Grades (Grade, TaskId, InternId) values (4, 25, 16);
+insert into Grades (Grade, TaskId, InternId) values (1, 5, 32);
+insert into Grades (Grade, TaskId, InternId) values (5, 17, 31);
+insert into Grades (Grade, TaskId, InternId) values (3, 9, 25);
+insert into Grades (Grade, TaskId, InternId) values (3, 23, 33);
+insert into Grades (Grade, TaskId, InternId) values (3, 14, 40);
+insert into Grades (Grade, TaskId, InternId) values (2, 3, 22);
+insert into Grades (Grade, TaskId, InternId) values (5, 6, 15);
+insert into Grades (Grade, TaskId, InternId) values (4, 10, 24);
+insert into Grades (Grade, TaskId, InternId) values (5, 2, 29);
+insert into Grades (Grade, TaskId, InternId) values (2, 10, 34);
+insert into Grades (Grade, TaskId, InternId) values (4, 13, 21);
+insert into Grades (Grade, TaskId, InternId) values (3, 29, 29);
+insert into Grades (Grade, TaskId, InternId) values (1, 29, 3);
+insert into Grades (Grade, TaskId, InternId) values (4, 10, 39);
+insert into Grades (Grade, TaskId, InternId) values (3, 15, 19);
+insert into Grades (Grade, TaskId, InternId) values (2, 9, 15);
+insert into Grades (Grade, TaskId, InternId) values (5, 6, 40);
+insert into Grades (Grade, TaskId, InternId) values (1, 21, 32);
+insert into Grades (Grade, TaskId, InternId) values (5, 27, 2);
+insert into Grades (Grade, TaskId, InternId) values (3, 3, 21);
+insert into Grades (Grade, TaskId, InternId) values (4, 24, 32);
+insert into Grades (Grade, TaskId, InternId) values (3, 7, 3);
+insert into Grades (Grade, TaskId, InternId) values (5, 3, 19);
+insert into Grades (Grade, TaskId, InternId) values (1, 25, 25);
+insert into Grades (Grade, TaskId, InternId) values (5, 14, 14);
+insert into Grades (Grade, TaskId, InternId) values (1, 26, 36);
+insert into Grades (Grade, TaskId, InternId) values (3, 1, 7);
+insert into Grades (Grade, TaskId, InternId) values (3, 25, 15);
+insert into Grades (Grade, TaskId, InternId) values (3, 18, 3);
+insert into Grades (Grade, TaskId, InternId) values (1, 26, 7);
+insert into Grades (Grade, TaskId, InternId) values (3, 28, 21);
+insert into Grades (Grade, TaskId, InternId) values (1, 7, 21);
+insert into Grades (Grade, TaskId, InternId) values (5, 16, 37);
+insert into Grades (Grade, TaskId, InternId) values (3, 6, 18);
+insert into Grades (Grade, TaskId, InternId) values (5, 24, 17);
+insert into Grades (Grade, TaskId, InternId) values (2, 15, 27);
+insert into Grades (Grade, TaskId, InternId) values (2, 12, 28);
+insert into Grades (Grade, TaskId, InternId) values (3, 5, 39);
+insert into Grades (Grade, TaskId, InternId) values (2, 15, 35);
+insert into Grades (Grade, TaskId, InternId) values (1, 3, 9);
+insert into Grades (Grade, TaskId, InternId) values (4, 27, 23);
+insert into Grades (Grade, TaskId, InternId) values (3, 11, 21);
+insert into Grades (Grade, TaskId, InternId) values (3, 22, 16);
+insert into Grades (Grade, TaskId, InternId) values (5, 23, 40);
+insert into Grades (Grade, TaskId, InternId) values (1, 16, 27);
+insert into Grades (Grade, TaskId, InternId) values (2, 12, 24);
+insert into Grades (Grade, TaskId, InternId) values (5, 12, 21);
+insert into Grades (Grade, TaskId, InternId) values (3, 23, 32);
+insert into Grades (Grade, TaskId, InternId) values (3, 6, 34);
+insert into Grades (Grade, TaskId, InternId) values (5, 6, 7);
+insert into Grades (Grade, TaskId, InternId) values (2, 21, 15);
+insert into Grades (Grade, TaskId, InternId) values (5, 21, 1);
+insert into Grades (Grade, TaskId, InternId) values (1, 28, 28);
+insert into Grades (Grade, TaskId, InternId) values (1, 16, 35);
+insert into Grades (Grade, TaskId, InternId) values (3, 2, 30);
+insert into Grades (Grade, TaskId, InternId) values (5, 8, 31);
+insert into Grades (Grade, TaskId, InternId) values (1, 14, 15);
+insert into Grades (Grade, TaskId, InternId) values (4, 18, 17);
+insert into Grades (Grade, TaskId, InternId) values (5, 16, 16);
+insert into Grades (Grade, TaskId, InternId) values (3, 10, 1);
+insert into Grades (Grade, TaskId, InternId) values (5, 29, 34);
+insert into Grades (Grade, TaskId, InternId) values (5, 4, 33);
+insert into Grades (Grade, TaskId, InternId) values (1, 26, 6);
+insert into Grades (Grade, TaskId, InternId) values (1, 7, 6);
+insert into Grades (Grade, TaskId, InternId) values (1, 17, 23);
+insert into Grades (Grade, TaskId, InternId) values (5, 26, 15);
+insert into Grades (Grade, TaskId, InternId) values (4, 15, 9);
+insert into Grades (Grade, TaskId, InternId) values (4, 2, 21);
+insert into Grades (Grade, TaskId, InternId) values (5, 11, 33);
+insert into Grades (Grade, TaskId, InternId) values (4, 2, 27);
+insert into Grades (Grade, TaskId, InternId) values (3, 29, 27);
+insert into Grades (Grade, TaskId, InternId) values (3, 22, 8);
+insert into Grades (Grade, TaskId, InternId) values (4, 17, 40);
+insert into Grades (Grade, TaskId, InternId) values (1, 12, 32);
+insert into Grades (Grade, TaskId, InternId) values (1, 27, 9);
+insert into Grades (Grade, TaskId, InternId) values (1, 5, 10);
+insert into Grades (Grade, TaskId, InternId) values (4, 14, 29);
+insert into Grades (Grade, TaskId, InternId) values (3, 27, 29);
+insert into Grades (Grade, TaskId, InternId) values (2, 24, 30);
+insert into Grades (Grade, TaskId, InternId) values (5, 25, 39);
+/* dubeug prints	
 SELECT * FROM MEMBERsfields mf Order by mf.memberid desc
 SELECT * FROM INTERNS
-SELECT * FROM INTERNSFIELDS ifs order by ifs.internid desc
-/*zad 3
-SELECT DISTINCT i.name, i.surname, i.gender FROM Interns i
-JOIN Internsfields ifs on i.InternId=ifs.InternId
-WHERE  ifs.Status = 'U tijeku'
+SELECT * FROM INTERNSFIELDS ifs order by ifs.status asc
+SELECT * FROM INTERNSHIPS
+SELECT * FROM Tasks
+SELECT * FROM Grades
+SELECT * FROM Members
 */
 
-/*zad 4
-SELECT DISTINCT COUNT(*) FROM Interns i
+ALTER TABLE Members 
+	ADD CONSTRAINT OIBLength CHECK(LENGTH(OIB)=11);
+ALTER TABLE MEMBERS
+	ADD CONSTRAINT NameLength CHECK (LENGTH(Name)>0);
+ALTER TABLE Members
+	ADD CONSTRAINT SurnameLength CHECK (LENGTH(Surname)>0);
+ALTER TABLE MEMBERS
+	ADD CONSTRAINT CorrectAge CHECK (NOW()-DateOfBirth>INTERVAL '16 YEARS');
+ALTER TABLE MEMBERS
+	ADD CONSTRAINT ResidenceCheck CHECK(LENGTH(Residence)>0);
+ALTER TABLE MEMBERS
+	ADD CONSTRAINT GenderCheck CHECK(Gender in ('M','F'))	;
+
+ALTER TABLE Interns
+	ADD CONSTRAINT OIBLength CHECK(LENGTH(OIB)=11);
+ALTER TABLE Interns
+	ADD CONSTRAINT NameLength CHECK (LENGTH(Name)>0);
+ALTER TABLE Interns
+	ADD CONSTRAINT SurnameLength CHECK (LENGTH(Surname)>0);
+ALTER TABLE Interns
+	ADD CONSTRAINT CorrectAge CHECK (NOW()-DateOfBirth>INTERVAL '16 YEARS');
+ALTER TABLE INterns
+	ADD CONSTRAINT CorrectAgeMaxCheck CHECK (NOW()-DateOfBirth<INTERVAL '25 years');
+ALTER TABLE Interns
+	ADD CONSTRAINT ResidenceCheck CHECK(LENGTH(Residence)>0);
+ALTER TABLE Interns
+	ADD CONSTRAINT GenderCheck CHECK(Gender in ('M','F'))	;
+	
+ALTER TABLE Grades
+	ADD CONSTRAINT GradeCheck CHECK (Grade in (1,2,3,4,5));
+ALTER TABLE InternsFields
+	ADD CONSTRAINT StatusCheck CHECK (Status in ('u tijeku', 'Izbacen', 'Polozen'));
+ALTER TABLE Tasks
+	ADD CONSTRAINT TaskTitleCheck CHECK (LENGTH(TItle)>0);
+ALTER TABLE Internships
+	ADD CONSTRAINT TimeCheck CHECK (EndDate-StartDate>INTERVAL '1 second');
+ALTER TABLE Internships
+	ADD CONSTRAINT PhaseCheck CHECK (Phase in ('završen', 'u tijeku', 'budući'));
+ALTER TABLE Fields
+	ADD CONSTRAINT NameCheck CHECK (Name in ('Programiranje', 'Multimedija', 'Dizajn', 'Marketing'));
+
+/*zad1
+SELECT m.name, m.surname FROM Members m
+where m.Residence!='Split'
+*/
+
+/*
+zad 2
+SELECT i.StartDate as Pocetak, i.EndDate as Kraj FROM INternships i
+ORDER BY i.StartDate desc
+*/
+
+/*zad 3
+SELECT DISTINCT i.name, i.surname FROM Interns i
 JOIN Internsfields ifs on i.InternId=ifs.InternId
-WHERE  ifs.Status = 'U tijeku' and i.gender='F'
+WHERE  ifs.Status = 'u tijeku'
+*/
+
+
+
+/*zad 4
+SELECT DISTINCT COUNT(*) as Broj_zenskih_pripravnica FROM Interns i
+JOIN Internsfields ifs on i.InternId=ifs.InternId
+WHERE  ifs.Status = 'u tijeku' and i.gender='F'
 */
 
 /*zad5
-SELECT DISTINCT COUNT(*) FROM Interns i
+SELECT DISTINCT COUNT(*) as FailedMuldimedia FROM Interns i
 JOIN Internsfields ifs on i.InternId=ifs.InternId
 WHERE  ifs.Status = 'Izbacen' and ifs.FIeldId=4
 */
+/*zad 6
+UPDATE Members m
+SET Residence = 'Moscow'
+WHERE Name like '%in';
 
-/*ALTER TABLE Members
-	ADD CONSTRAINT OIBLength CHECK(LENGTH(OIB)=11)
-	ADD CONSTRAINT NameLength CHECK (LENGTH(Name)>0)
-	ADD CONSTRAINT SurnameLength CHECK (LENGTH(Surname)>0)
 
-	ADD CONSTRAINT CorrectFileds CHECK (WHERE )
-*//*Reset
+Select m.name, m.residence FROM members m
+where m.name like '%in'
+*/
+/*zad7
+
+
+DELETE  FROM MembersFields mf 
+USING Members m 
+WHERE NOW()-m.DateOfBirth> INTERVAL '25 years';
+
+UPDATE Tasks ts
+SET MemberId=1	
+FROM Members ms
+WHERE ts.MemberId in (SELECT ms.memberid FROM Members ms WHERE NOW()-ms.DateOfBirth> INTERVAL '25 years');
+
+
+UPDATE InternShips It 
+SET LeaderId=1
+FROM Members ms
+WHERE it.LeaderId in (SELECT m.memberid FROM Members m WHERE NOW()-m.DateOfBirth> INTERVAL '25 years')
+;
+UPDATE FIelds fl
+SET Leaderid=1
+FROM Members ms
+WHERE fl.LeaderId in (SELECT m.memberid FROM Members m WHERE NOW()-m.DateOfBirth> INTERVAL '25 years') 
+;
+DELETE FROM Members m
+WHERE NOW()-M.DateOfBirth> INTERVAL '25 years';
+*/
+
+
+/*zad 8 - nisam siguran jel radi
+UPDATE InternsFields ifs
+SET Status='Izbacen'
+FROM(
+SELECT ir.InternId, AVG(g.grade), f.fieldId  FROM grades g
+JOIN Interns ir on ir.InternId=g.Internid
+JOIN Internsfields ifs on ir.InternId=ifs.InternId
+JOIN Internships ip on  ip.InternshipId=ifs.InternshipId
+JOIN Fields f on f.FieldId=ifs.FieldId
+WHERE ip.phase='u tijeku'
+GROUP BY f.Fieldid, ir.Internid
+HAVING AVG(g.grade)<2.4) AS DEL
+WHERE DEL.FieldId=Ifs.FieldId AND DEL.InternId=Ifs.InternId;
+*/
+
+
+
+/*Reset
 DROP TABLE INTERNS cascade;
 DROP TABLE MEMBeRS CASCADE;
 DROP TABLE FIelds cascade;
 DROP TABLE MEMBERSFIELDS;
-DROP TABLE INTERNsFIELDS
+DROP TABLE INTERNsFIELDS;
+DROP TABLE INTERNSHIPS CASCADE;
+DROP TABLE TASKS CASCADE;
+DROP TABLE GRADES CASCADE;
 */
